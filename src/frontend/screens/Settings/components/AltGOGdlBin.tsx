@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import useSetting from 'frontend/hooks/useSetting'
 import { PathSelectionBox } from 'frontend/components/UI'
+import { defaultBinaryPaths } from 'common/constants'
 
 const AltGOGdlBin = () => {
   const { t } = useTranslation()
@@ -34,10 +35,7 @@ const AltGOGdlBin = () => {
       type="file"
       onPathChange={setAltGogdlBin}
       path={altGogdlBin}
-      placeholder={t(
-        'placeholder.alt-gogdl-bin',
-        'Using built-in GOGDL binary...'
-      )}
+      placeholder={defaultBinaryPaths.gogdl}
       pathDialogTitle={t(
         'box.choose-gogdl-binary',
         'Select GOGDL Binary (needs restart)'

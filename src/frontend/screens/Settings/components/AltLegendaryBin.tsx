@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import useSetting from 'frontend/hooks/useSetting'
 import { PathSelectionBox } from 'frontend/components/UI'
+import { defaultBinaryPaths } from 'common/constants'
 
 const AltLegendaryBin = () => {
   const { t } = useTranslation()
@@ -36,10 +37,7 @@ const AltLegendaryBin = () => {
       type="file"
       onPathChange={setAltLegendaryBin}
       path={altLegendaryBin}
-      placeholder={t(
-        'placeholder.alt-legendary-bin',
-        'Using built-in Legendary binary...'
-      )}
+      placeholder={defaultBinaryPaths.legendary}
       pathDialogTitle={t(
         'box.choose-legendary-binary',
         'Select Legendary Binary (needs restart)'
