@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import useSetting from 'frontend/hooks/useSetting'
 import { PathSelectionBox } from 'frontend/components/UI'
+import { defaultBinaryPaths } from 'common/constants'
 
 const AltNileBin = () => {
   const { t } = useTranslation()
@@ -33,10 +34,7 @@ const AltNileBin = () => {
       type="file"
       onPathChange={setAltNileBin}
       path={altNileBin}
-      placeholder={t(
-        'placeholder.alt-nile-bin',
-        'Using built-in Nile binary...'
-      )}
+      placeholder={defaultBinaryPaths.nile}
       pathDialogTitle={t(
         'box.choose-nile-binary',
         'Select Nile Binary (needs restart)'

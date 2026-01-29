@@ -167,7 +167,8 @@ async function downloadComet() {
         },
         arm64: {}
       }
-    ),
+    )
+    /*
     downloadGithubAssets('comet', 'imLinguin/comet', RELEASE_TAGS['comet'], {
       x64: {
         linux: 'comet-x86_64-unknown-linux-gnu',
@@ -180,6 +181,7 @@ async function downloadComet() {
         win32: 'comet-aarch64-pc-windows-msvc.exe'
       }
     })
+    */
   ])
 }
 
@@ -237,7 +239,8 @@ async function main() {
     return
   }
 
-  const binariesToDownload = await compareDownloadedTags()
+  // const binariesToDownload = await compareDownloadedTags()
+  const binariesToDownload = ['comet', 'epic-integration']
   if (!binariesToDownload.length) {
     console.log('Nothing to download, binaries are up-to-date')
     return

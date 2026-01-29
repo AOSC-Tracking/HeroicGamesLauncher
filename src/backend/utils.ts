@@ -81,6 +81,7 @@ import {
   windowIcon
 } from './constants/paths'
 import { parse } from '@node-steam/vdf'
+import { defaultBinaryPaths } from 'common/constants'
 
 import type LogWriter from 'backend/logger/log_writer'
 import { isRunning } from './downloadmanager/downloadqueue'
@@ -452,7 +453,7 @@ function archSpecificBinary(binaryName: string) {
   return join(publicDir, 'bin', 'x64', process.platform, binaryName)
 }
 
-let defaultLegendaryPath: string | undefined = undefined
+let defaultLegendaryPath: string | undefined = defaultBinaryPaths.legendary
 function getLegendaryBin(): { dir: string; bin: string } {
   const settings = GlobalConfig.get().getSettings()
   if (settings?.altLegendaryBin) {
@@ -465,7 +466,7 @@ function getLegendaryBin(): { dir: string; bin: string } {
   return splitPathAndName(fixAsarPath(defaultLegendaryPath))
 }
 
-let defaultGogdlPath: string | undefined = undefined
+let defaultGogdlPath: string | undefined = defaultBinaryPaths.gogdl
 function getGOGdlBin(): { dir: string; bin: string } {
   const settings = GlobalConfig.get().getSettings()
   if (settings?.altGogdlBin) {
@@ -477,7 +478,7 @@ function getGOGdlBin(): { dir: string; bin: string } {
   return splitPathAndName(fixAsarPath(defaultGogdlPath))
 }
 
-let defaultCometPath: string | undefined = undefined
+let defaultCometPath: string | undefined = defaultBinaryPaths.comet
 function getCometBin(): { dir: string; bin: string } {
   const settings = GlobalConfig.get().getSettings()
   if (settings?.altCometBin) {
@@ -489,7 +490,7 @@ function getCometBin(): { dir: string; bin: string } {
   return splitPathAndName(fixAsarPath(defaultCometPath))
 }
 
-let defaultNilePath: string | undefined = undefined
+let defaultNilePath: string | undefined = defaultBinaryPaths.nile
 function getNileBin(): { dir: string; bin: string } {
   const settings = GlobalConfig.get().getSettings()
   if (settings?.altNileBin) {
