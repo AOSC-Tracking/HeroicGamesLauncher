@@ -152,5 +152,12 @@
   },
   "resolutions": {
     "ts-morph": "17.0.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "electron": "42.3.0",
+      "electron-builder": "npm:@loongdotjs/electron-builder@26.8.2-3",
+      "@vitejs/plugin-react-swc": "npm:@vitejs/plugin-react@^5.1.2"
+    }
   }
 }
