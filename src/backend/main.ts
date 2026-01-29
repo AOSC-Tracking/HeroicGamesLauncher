@@ -678,7 +678,7 @@ addHandler('isFullscreen', () => isSteamDeckGameMode || isCLIFullscreen)
 addHandler('getGameOverride', async () => getGameOverride())
 addHandler('getGameSdl', async (event, appName) => getGameSdl(appName))
 
-addHandler('showUpdateSetting', () => !isFlatpak)
+addHandler('showUpdateSetting', () => false)
 
 addHandler('getLatestReleases', async () => {
   const { checkForUpdatesOnStartup } = GlobalConfig.get().getSettings()
