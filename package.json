@@ -153,5 +153,12 @@
   },
   "resolutions": {
     "ts-morph": "17.0.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "electron": "39.2.7",
+      "electron-builder": "npm:@riscv-forks/electron-builder",
+      "@vitejs/plugin-react-swc": "npm:@vitejs/plugin-react@^5.1.2"
+    }
   }
 }
