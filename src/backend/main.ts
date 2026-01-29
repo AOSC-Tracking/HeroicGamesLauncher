@@ -684,7 +684,7 @@ addHandler('getGameSdl', async (event, appName) =>
   libraryManagerMap['legendary'].getGameSdl(appName)
 )
 
-addHandler('showUpdateSetting', () => !isFlatpak)
+addHandler('showUpdateSetting', () => false)
 
 addHandler('getLatestReleases', async () => {
   const { checkForUpdatesOnStartup } = GlobalConfig.get().getSettings()

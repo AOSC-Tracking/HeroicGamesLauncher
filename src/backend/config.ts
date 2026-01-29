@@ -335,7 +335,7 @@ class GlobalConfigV0 extends GlobalConfig {
       autoInstallDxvkNvapi: isLinux,
       addSteamShortcuts: false,
       preferSystemLibs: false,
-      checkForUpdatesOnStartup: !isFlatpak,
+      checkForUpdatesOnStartup: false,
       autoUpdateGames: false,
       customWinePaths: [],
       defaultInstallPath: heroicInstallPath,
